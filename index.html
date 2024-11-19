@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SNU BBF Map</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- Popup structure -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup" id="popup">
+      <button
+        id="closePopup"
+        style="position: absolute; top: 10px; right: 10px"
+      >
+        Close
+      </button>
+      <iframe id="popupIframe" src=""></iframe>
+    </div>
+
+    <!-- Legend -->
+    <div
+      id="legend"
+      style="
+        background: white;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+        font-weight: bold;
+      "
+    >
+      <div style="font-size: 18px; margin-bottom: 10px">범례</div>
+      <label style="display: block; margin-bottom: 5px; font-size: 16px">
+        <input type="checkbox" id="type1" checked />
+        BBF 조사 대시보드
+      </label>
+      <label style="display: block; font-size: 16px">
+        <input type="checkbox" id="type2" checked />
+        출입문 BBF 여부
+      </label>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8d8d2019c383035c747f509b737221b9"
+    ></script>
+    <script src="script.js"></script>
+    <script src="map.js"></script>
+    <script src="script-door.js"></script>
+  </body>
+</html>
