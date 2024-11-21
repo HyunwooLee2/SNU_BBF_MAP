@@ -44,11 +44,24 @@ html {
 #legend {
   font-family: Arial, sans-serif;
   background: white;
-  padding: 15px;
+  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 10px;
   position: absolute;
   top: 10px;
   left: 10px;
   z-index: 1000;
+}
+
+.mapLabel {
+  display: flex;
+  font-size: 15px;
+  font-weight: 600;
+  align-items: bottom; /* Center vertically */
+}
+
+.textLabel {
+  /* text-align: bottom; */
+  bottom: 0px;
+  margin: 4px;
 }
